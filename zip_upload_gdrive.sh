@@ -11,7 +11,7 @@ POSTFIX='.tar.gz'
 FILENAME=$PREFIX$DATE$POSTFIX
 
 # Notify that process is starting
-notify-send "Git backup process starting"
+notify-send "Backup process starting"
 
 # Zip the files 
 echo $FILENAME
@@ -21,7 +21,7 @@ tar -zcf $FILENAME $TARGET_DIR$ZIP_DIR
 gdrive upload --parent $PARENT_ID $FILENAME
 rm $FILENAME
 
-notify-send "Git backup process complete"
+notify-send "Backup process complete"
 
 
 
